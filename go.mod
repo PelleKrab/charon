@@ -3,7 +3,7 @@ module github.com/obolnetwork/charon
 go 1.23
 
 require (
-	github.com/attestantio/go-eth2-client v0.21.10
+	github.com/attestantio/go-eth2-client v0.21.12-0.20241014214053-759b0ace2e43
 	github.com/bufbuild/buf v1.35.1
 	github.com/coinbase/kryptology v1.5.6-0.20220316191335-269410e1b06b
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.3.0
@@ -159,7 +159,7 @@ require (
 	github.com/opencontainers/image-spec v1.1.0 // indirect
 	github.com/opencontainers/runtime-spec v1.2.0 // indirect
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58 // indirect
-	github.com/pk910/dynamic-ssz v0.0.3 // indirect
+	github.com/pk910/dynamic-ssz v0.0.4 // indirect
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pkg/profile v1.7.0 // indirect
@@ -211,4 +211,4 @@ replace github.com/coinbase/kryptology => github.com/ObolNetwork/kryptology v0.0
 
 // We're replacing go-eth2-client with a branch off our fork, at version v0.21.10.
 // This is needed to ensure Gnosis compatibility.
-replace github.com/attestantio/go-eth2-client => github.com/ObolNetwork/go-eth2-client v0.21.11-0.20240822135044-f0a5b21e02c6
+// replace github.com/attestantio/go-eth2-client => github.com/ObolNetwork/go-eth2-client v0.21.11-0.20240822135044-f0a5b21e02c6
