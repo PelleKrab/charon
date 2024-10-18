@@ -5,7 +5,7 @@ package eth2wrap
 import (
 	"context"
 
-	eth2p0 "github.com/attestantio/go-eth2-client/spec/phase0"
+	"github.com/attestantio/go-eth2-client/spec"
 
 	"github.com/obolnetwork/charon/eth2util/eth2exp"
 )
@@ -169,12 +169,12 @@ func (m multi) AggregateSyncCommitteeSelections(ctx context.Context, selections 
 	return res, err
 }
 
-func (m multi) BlockAttestations(ctx context.Context, stateID string) ([]*eth2p0.Attestation, error) {
+func (m multi) BlockAttestations(ctx context.Context, stateID string) ([]*spec.VersionedAttestation, error) {
 	const label = "block_attestations"
 	defer latency(label)()
 
 	res, err := provide(ctx, m.clients,
-		func(ctx context.Context, cl Client) ([]*eth2p0.Attestation, error) {
+		func(ctx context.Context, cl Client) ([]*spec.VersionedAttestation, error) {
 			return cl.BlockAttestations(ctx, stateID)
 		},
 		nil, m.selector,
