@@ -481,7 +481,7 @@ func createMEVBlock(ctx context.Context, conf *testMEVConfig, target string, nex
 			Deposits:               []*eth2p0.Deposit{},
 			VoluntaryExits:         []*eth2p0.SignedVoluntaryExit{},
 			SyncAggregate:          &eth2a.SyncAggregate{},
-			ExecutionPayloadHeader: builderBid.Deneb.Message.Header,
+			ExecutionPayloadHeader: builderBid.Electra.Message.Header,
 		},
 	}
 
